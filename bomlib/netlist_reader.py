@@ -374,10 +374,20 @@ class netlist():
     def getSheet(self):
         return self.design.getChild("sheet")
 
+    def getCompany(self):
+        sheet= self.getSheet()
+        if sheet == None: return ""
+        return sheet.get("company")
+
     def getSheetDate(self):
         sheet= self.getSheet()
         if sheet == None: return ""
         return sheet.get("date")
+
+    def getTitle(self):
+        sheet = self.getSheet()
+        if sheet == None: return ""
+        return sheet.get("title")
 
     def getVersion(self):
         """Return the verison of the sheet info"""

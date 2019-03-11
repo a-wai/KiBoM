@@ -1,6 +1,7 @@
 from bomlib.csv_writer import WriteCSV
 from bomlib.xml_writer import WriteXML
 from bomlib.html_writer import WriteHTML
+from bomlib.htmlpretty import HTMLPretty
 
 import bomlib.columns as columns
 from bomlib.component import *
@@ -56,7 +57,7 @@ def WriteBoM(filename, groups, net, headings = columns.ColumnList._COLUMNS_DEFAU
             print("Error writing CSV output")
 
     elif ext in ["htm","html"]:
-        if WriteHTML(filename, groups, net, headings, prefs):
+        if HTMLPretty(filename, groups, net, headings, prefs):
             print("HTML Output -> {fn}".format(fn=filename))
             result = True
         else:
