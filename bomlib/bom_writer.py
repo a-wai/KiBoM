@@ -3,11 +3,8 @@
 from bomlib.csv_writer import WriteCSV
 from bomlib.xml_writer import WriteXML
 from bomlib.html_writer import WriteHTML
-<<<<<<< HEAD
 from bomlib.xlsx_writer import WriteXLSX
-=======
 from bomlib.htmlpretty import HTMLPretty
->>>>>>> Improve HTML output
 
 import bomlib.columns as columns
 from bomlib.preferences import BomPref
@@ -63,8 +60,8 @@ def WriteBoM(filename, groups, net, headings=columns.ColumnList._COLUMNS_DEFAULT
         else:
             print("Error writing CSV output")
 
-    elif ext in ["htm", "html"]:
-        if WriteHTML(filename, groups, net, headings, prefs):
+    elif ext in ["htm","html"]:
+        if HTMLPretty(filename, groups, net, headings, prefs):
             print("HTML Output -> {fn}".format(fn=filename))
             result = True
         else:

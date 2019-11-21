@@ -373,6 +373,11 @@ class netlist():
         return sheet.get("company")
 
     def getSheetDate(self):
+        sheet= self.getSheet()
+        if sheet == None: return ""
+        return sheet.get("company")
+
+    def getSheetDate(self):
         sheet = self.getSheet()
         if sheet is None:
             return ""

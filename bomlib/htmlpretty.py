@@ -71,7 +71,6 @@ def HTMLPretty(filename, groups, net, headings, prefs):
         html.write('\t.footer {padding-left: 25px;padding-right: 25px;}\n')
         html.write('\tinput[type="text"]{background: transparent;border: solid 1px #CCC;width=100%;}\n')
         html.write('\ttable.minimalistBlack {width: 95vw;text-align: left;border-collapse: collapse;margin-top: 120px;}\n')
-        html.write('\ttable.minimalistBlack td, table.minimalistBlack th {padding: 5px 4px;}\n')
         html.write('\ttable.minimalistBlack tbody td {padding-left: 25px;font-size: 13px;color: #000000;}\n')
         html.write('\ttable.minimalistBlack thead {background: #FFFFFF;background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);background: linear-gradient(to bottom, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);}\n')
         html.write('\ttable.minimalistBlack thead th {padding-left: 25px;font-size: 15px;font-weight: bold;color: #000000;text-align: left;}\n')
